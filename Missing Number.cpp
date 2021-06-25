@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
@@ -9,15 +10,11 @@ int main()
 	for (int i = 0; i < n-1; ++i)
 		cin >> array[i];
 
-	int i, j = 0;
-	for (i = 1; i <= n; ++i){
-		j = 0;
-		while(j < n-1){
-			if(array[j] == i) break;
-			j++;
-		}
-		if(j == n-1) break;
-	}
-	cout << i;
+	vector<bool> exist (n, false);
+	for (int i=0; i<n-1; ++i)
+		exist[array[i]-1] = true;
+	for (int i=0; i<n; ++i)
+		if(exist[i] == false)
+			cout << i+1;
 	return 0;
 }
