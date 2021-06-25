@@ -6,7 +6,6 @@ int main(int argc, char const *argv[])
 	string s;
 	int max_length = 1, current_length = 0, k;
 	cin >> s;
-
 	for(int i=0; i<s.length()-1; i++){
 		if(s[i] == s[i+1]){
 			current_length = i;
