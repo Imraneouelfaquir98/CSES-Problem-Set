@@ -9,9 +9,9 @@ int main(int argc, char const *argv[])
 
 	for(int i=0; i<s.length()-1; i++){
 		if(s[i] == s[i+1]){
-			k = i; current_length = 1;
-			while(s[k] == s[k+1]) k++;
-			current_length += k-i;
+			current_length = i;
+			while(s[i] == s[i+1] && i<s.length()-1) i++;
+			current_length = i-current_length + 1;
 		}
 		if(current_length > max_length) max_length = current_length;
 	}
