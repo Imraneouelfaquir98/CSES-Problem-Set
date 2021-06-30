@@ -6,9 +6,7 @@ int main(int argc, char const *argv[])
 {
 	long long int T, count = 0;
 	cin >> T;
-
 	int i = 0, j = 0, move = 0;
-
 	for(int n = 1; n <= T; n++){
 		move = 0;
 		for(i = 0; i < n-1 and n>2; i++)
